@@ -16,6 +16,6 @@ public class MyApp02 {
 }
 class MyActionListener implements ActionListener{
 	public void actionPerformed(ActionEvent e){
-		System.out.println("Hello");
+		System.out.println("Hello")
 	}
 }
