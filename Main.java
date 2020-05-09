@@ -1,37 +1,38 @@
-import java.util.ArrayList;
-import java.util.*;
+import java.util.Scanner;
+import java.io.*;
 
-public class Main {
-	public static void main(String[] args){
+public class Main{  
+    public static void main(String args[]) throws FileNotFoundException{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Input key for shape : ");
+        String x = sc.nextLine();
+		char input = x.charAt(0);
 		
+		
+		Scanner in = new Scanner(new File("Shape.txt"));
 
-		ArrayList<Shape> shapes = new ArrayList<Shape>();
-
-		shapes.add(new Rectangle("B3", 2.0, 8.0));
-		shapes.add(new Circle("A2", 3.0));
-		shapes.add(new Rectangle("B1", 3.0, 5.0));
-		shapes.add(new Circle("A5", 3.0));
-		shapes.add(new Sphere("C3", 5.0));
-		shapes.add(new Cylinder("D1", 3.0, 2.0));
-		shapes.add(new Circle("A1", 5.0));
-		shapes.add(new Cuboid("E2", 2.0,8.0, 3.0));
-		shapes.add(new Sphere("C5", 3.0));
-		
-
-		System.out.println("**** Use default sorting ****");
-		Collections.sort(shapes);
-		
-		double total = 0.0;
-		for(Shape shape : shapes){
-			total += shape.getArea();
-			System.out.printf("Total area = %.2f\n", total);
-		}
-		System.out.println("**** Use Salary Comparator ****");
-		Collections.sort(shapes, new AreaComparator());
-		
-		for(Shape shape : shapes){
-			total += shape.getArea();
-			System.out.printf("Total area = %.2f\n", total);
-		}
-	}
+			String A = in.nextLine();
+			String B = in.nextLine();
+			String C = in.nextLine();
+			String D = in.nextLine();
+			String E = in.nextLine();
+			
+			if (input == A.charAt(0)){
+				System.out.println(A);
+			}
+			else if (input == B.charAt(0)){
+				System.out.println(B);
+			}
+			else if (input == C.charAt(0)){
+				System.out.println(C);
+			}
+			else if (input == D.charAt(0)){
+				System.out.println(D);
+			}
+			else if (input == E.charAt(0)){
+				System.out.println(E);
+			}
+	
+		in.close();
+    }  
 }
