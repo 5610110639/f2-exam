@@ -1,4 +1,4 @@
-public class Cuboid extends Shape implements VolumeCalculable{	
+public class Cuboid extends Shape implements AreaCalculable{	
     private double width;
     private double depth;
 	private double height;
@@ -33,17 +33,14 @@ public class Cuboid extends Shape implements VolumeCalculable{
 		this.depth = depth;
 	}
 
-	public double getArea(){
-		return width * height;
-    }
-    public double getVolume(){
+    public double getArea(){
 		return   width* height *depth;
 	}
 
 
 	public static void main(String[] args){
-		Cuboid e = new Cuboid("E", 2.0, 8.0, 3.0);
-		System.out.println("Area of " + e.getName() + " is " + e.getVolume());
+		Cuboid E = new Cuboid("E", 2.0, 8.0, 3.0);
+		System.out.println("Area of " + E.getName() + " is " + E.getArea());
 	}
 
 	

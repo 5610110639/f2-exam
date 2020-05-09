@@ -20,7 +20,7 @@ public class Circle extends Shape implements AreaCalculable {
     }
 
 	public static void main(String[] args){
-		Circle c = new Circle("A", 3.0);
-		System.out.println("Area of " +  c.getName() + " is " + c.getArea());
+		Circle A = new Circle("A", 3.0);
+		System.out.println("Area of " +  A.getName() + " is " + A.getArea());
 	}
 }
