@@ -21,8 +21,11 @@ public class Rectangle extends Shape {
 	public double getArea(){
 		return width * height;
 	}
-	public static void main(String[] args){
-		Rectangle B = new Rectangle("B", 2, 3);
-		System.out.println("Area of " + B.getName() + " is " + B.getArea());
-	}
+	public String getName(){
+		return "Rectangle";
+    }
+	public int getVolume(){
+		return 0;
+    }
+
 }

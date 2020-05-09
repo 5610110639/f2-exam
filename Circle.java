@@ -18,9 +18,11 @@ public class Circle extends Shape implements AreaCalculable {
 	public double getArea(){
 		return Math.PI * radius * radius;
     }
-
-	public static void main(String[] args){
-		Circle A = new Circle("A", 3.0);
-		System.out.println("Area of " +  A.getName() + " is " + A.getArea());
-	}
+	public String getName(){
+		return "Circle";
+    }
+	public int getVolume(){
+		return 0;
+    }
+	
 }

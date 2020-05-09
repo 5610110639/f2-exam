@@ -1,4 +1,4 @@
-public class Cylinder extends Shape implements AreaCalculable {	
+public class Cylinder extends Shape implements VolumeCalculable {	
 
     private double radius;
     private double height;
@@ -24,13 +24,16 @@ public class Cylinder extends Shape implements AreaCalculable {
 	public void setHeight(double height){
 		this.height = height;
     }
-
+    
     public double getArea(){
-        return Math.PI * radius * radius * height;
+		return Math.PI * radius * radius;
     }
 
-	public static void main(String[] args){
-		Cylinder D = new Cylinder ("D", 3 , 2);
-		System.out.println("Area of " +  D.getName() + " is " + D.getArea());
-	}
+    public double getVolume(){
+        return Math.PI * radius * radius * height;
+    }
+	public String getName(){
+		return "Cylinder";
+    }
+
 }
