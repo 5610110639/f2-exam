@@ -22,7 +22,7 @@ public class Rectangle extends Shape {
 		return width * height;
 	}
 	public static void main(String[] args){
-		Rectangle c = new Rectangle("R1", 2, 3);
+		Rectangle c = new Rectangle("B", 2, 3);
 		System.out.println("Area of " + c.getName() + " is " + c.getArea());
 	}
 }
